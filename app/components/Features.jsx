@@ -1,9 +1,9 @@
 export default function Features() {
   return (
     <section id="features">
-      <div className="section-label">TOOLS &amp; POWER-UPS</div>
-      <h2 className="section-title reveal">TOOLS TO EXPAND NATURALLY</h2>
-      <p className="section-desc reveal">Your full inventory for authentic influence.</p>
+      <div className="section-label">FOR BRANDS</div>
+      <h2 className="section-title reveal">BUILD CAMPAIGNS THAT ACTUALLY CONVERT</h2>
+      <p className="section-desc reveal">Stop paying for impressions that don&apos;t move the needle.</p>
 
       <div className="features-grid">
         <div className="feature-card reveal" style={{ borderColor: "var(--accent-cyan)" }}>
@@ -19,11 +19,11 @@ export default function Features() {
             <rect x="20" y="20" width="8" height="8" fill="white" opacity="0.5"/>
           </svg>
           <div className="feature-number">TOOL 01</div>
-          <div className="feature-title">EFFORTLESS DISCOVERY</div>
+          <div className="feature-title">CREATOR DISCOVERY</div>
           <div className="feature-body">
-            Breathe easy navigating a curated ecosystem of brands and creators that perfectly match your aesthetic and energy. No noise, just signal.
+            Find nano, micro, and small influencers filtered by niche, engagement rate, audience demographics, and past performance. No guesswork, just the right fit.
           </div>
-          <span className="feature-tag tag-cyan">EXPLORE MAP</span>
+          <span className="feature-tag tag-cyan">FIND YOUR FIT</span>
         </div>
 
         <div className="feature-card reveal" style={{ borderColor: "var(--accent-lime)" }}>
@@ -36,11 +36,11 @@ export default function Features() {
             <rect x="18" y="20" width="12" height="4" fill="white" opacity="0.4"/>
           </svg>
           <div className="feature-number">TOOL 02</div>
-          <div className="feature-title">ORGANIC GROWTH</div>
+          <div className="feature-title">IMPACT ANALYTICS</div>
           <div className="feature-body">
-            Build your presence without forcing it. Authenticity naturally floats to the top, outperforming every engineered trend and paid push.
+            Track what matters: conversions, engagement quality, sentiment, and ROI, not just reach. Every rupee backed by verified performance data.
           </div>
-          <span className="feature-tag tag-lime">LEVEL UP</span>
+          <span className="feature-tag tag-lime">REAL METRICS</span>
         </div>
 
         <div className="feature-card reveal" style={{ borderColor: "var(--accent-pink)" }}>
@@ -56,11 +56,11 @@ export default function Features() {
             <rect x="38" y="20" width="4" height="4" fill="white" opacity="0.4"/>
           </svg>
           <div className="feature-number">TOOL 03</div>
-          <div className="feature-title">TRANSPARENT CONNECTIONS</div>
+          <div className="feature-title">CAMPAIGN BUILDER</div>
           <div className="feature-body">
-            No intermediaries blocking the view. Chat directly, clearly, and form genuine partnerships on your own terms. Pixel-clear communication.
+            Design, launch, and manage influencer campaigns with the same precision as your best ad tools. Browse an open marketplace or let Socu&apos;s matching engine find the perfect fit.
           </div>
-          <span className="feature-tag tag-pink">DIRECT LINK</span>
+          <span className="feature-tag tag-pink">LAUNCH NOW</span>
         </div>
       </div>
     </section>

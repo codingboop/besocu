@@ -3,12 +3,12 @@
 import { useEffect, useRef } from "react";
 
 const badges = [
-  { icon: "🌱", name: "FIRST COLLAB", pts: "+500 XP", color: "var(--accent-gold)", locked: false },
-  { icon: "🎯", name: "NICHE SNIPER", pts: "+1200 XP", color: "var(--accent-cyan)", locked: false },
-  { icon: "📈", name: "VIRAL MOMENT", pts: "+2500 XP", color: "var(--accent-lime)", locked: false },
-  { icon: "🤝", name: "TRUST BUILDER", pts: "+800 XP", color: "var(--accent-pink)", locked: false },
-  { icon: "👑", name: "BRAND LEGEND", pts: "+5000 XP", color: "#444", locked: true },
-  { icon: "🚀", name: "ORBIT LEVEL", pts: "+10000 XP", color: "#444", locked: true },
+  { icon: "📊", name: "CREATOR DASHBOARD", pts: "TRACK YOUR GROWTH", color: "var(--accent-gold)", locked: false },
+  { icon: "🎯", name: "CAMPAIGN MARKETPLACE", pts: "DEALS THAT FIT YOU", color: "var(--accent-cyan)", locked: false },
+  { icon: "📣", name: "PITCH TOOLS", pts: "BRANDS COME TO YOU", color: "var(--accent-lime)", locked: false },
+  { icon: "💸", name: "FAIR COMPENSATION", pts: "PAID ON IMPACT", color: "var(--accent-pink)", locked: false },
+  { icon: "📈", name: "GROWTH TOOLKIT", pts: "OPTIMIZE YOUR REACH", color: "var(--accent-gold)", locked: false },
+  { icon: "👑", name: "TOP CREATOR TIER", pts: "COMING SOON", color: "#444", locked: true },
 ];
 
 export default function LevelUp() {
@@ -49,13 +49,13 @@ export default function LevelUp() {
 
   return (
     <section id="levelup">
-      <div className="section-label">ACHIEVEMENT SYSTEM</div>
-      <h2 className="section-title reveal">LEVEL UP YOUR INFLUENCE</h2>
-      <p className="section-desc reveal">Every partnership earns XP. Every authentic collab unlocks new tiers.</p>
+      <div className="section-label">FOR INFLUENCERS</div>
+      <h2 className="section-title reveal">YOUR GROWTH. YOUR TERMS. YOUR EARNINGS.</h2>
+      <p className="section-desc reveal">Whether you have 1,000 followers or 100,000, your voice has value here. Nano creators finally earn what they deserve.</p>
 
       <div className="xp-bar-container reveal">
         <div className="xp-label">
-          <span>► LVL 4 — MICRO CREATOR</span>
+          <span>► NANO CREATOR - BUILDING INFLUENCE</span>
           <span>7,300 / 10,000 XP</span>
         </div>
         <div className="xp-track">

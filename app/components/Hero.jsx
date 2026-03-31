@@ -88,12 +88,12 @@ export default function Hero() {
       <div className="hero-content">
         <div className="notif-badge">
           <div className="notif-dot" />
-          ► NEW LEVEL UNLOCKED — AUTHENTIC INFLUENCE
+          ► PRECISION INFLUENCE. REAL RESULTS.
         </div>
 
         <h1 className="hero-title">BEYOND THE SPRAY &amp; PRAY</h1>
         <p className="hero-desc">
-          A natural space connecting authentic micro and nano influencers with brands. Float above the noise.
+          Socu connects brands with nano, micro, and small influencers to run precision-targeted campaigns, delivering measurable social impact at or below the cost of traditional influencer marketing.
         </p>
 
         <div className="health-container">

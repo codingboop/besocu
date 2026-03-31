@@ -1,10 +1,10 @@
 export default function Why() {
   return (
     <section id="why">
-      <div className="section-label">MISSION LOG</div>
-      <h2 className="section-title reveal">WHY SOCU?</h2>
+      <div className="section-label">THE PROBLEM</div>
+      <h2 className="section-title reveal">INFLUENCER MARKETING IS BROKEN</h2>
       <p className="section-desc reveal">
-        Traditional platforms emphasize millions of empty followers.<br />We nurture real influence.
+        Brands burn money. Influencers burn out. Audiences tune out.
       </p>
 
       <div className="vs-grid reveal">
@@ -18,14 +18,14 @@ export default function Why() {
               <rect x="10" y="6" width="4" height="4" fill="#ef4444"/>
               <rect x="6" y="10" width="4" height="4" fill="#ef4444"/>
             </svg>
-            THE RIGID WAY
+            THE OLD WAY
           </div>
-          <div className="vs-card-title">SPRAY &amp; PRAY ADVERTISING</div>
+          <div className="vs-card-title">SPRAY AND PRAY ADVERTISING</div>
           <div className="vs-card-body">
-            Spending endlessly on massive accounts with broad, disengaged audiences. It&apos;s a heavy, expensive anchor dragging your brand down.
+            Brands dump budgets into mega-influencers chasing reach, not resonance. Campaigns feel like billboards, loud, expensive, and forgotten. The creators who actually move their communities are left without the tools or the deals to prove their worth.
           </div>
           <div className="feature-tag" style={{ background: "#ef4444", color: "white", fontSize: "7px", padding: "6px 12px", display: "inline-block", marginTop: "16px" }}>
-            ⬇ LOW ROI
+            ⬇ BRANDS BURN MONEY
           </div>
         </div>
 
@@ -45,14 +45,14 @@ export default function Why() {
               <rect x="4" y="10" width="8" height="4" fill="#a3e635"/>
               <rect x="6" y="12" width="4" height="4" fill="#a3e635"/>
             </svg>
-            THE NATURAL WAY
+            THE SOCU WAY
           </div>
-          <div className="vs-card-title">ORGANIC COLLABORATION</div>
+          <div className="vs-card-title">PRECISION CREATOR PARTNERSHIPS</div>
           <div className="vs-card-body">
-            Collaborating organically with engaged nano and micro influencers in precise niches, lifting everyone higher and floating above the noise.
+            Socu is an end-to-end influencer marketing platform built for the era of authentic social influence. We give brands the precision of a performance ad tool with the human touch of real creator partnerships. We give influencers the infrastructure to grow, pitch, and get paid fairly.
           </div>
           <div className="feature-tag tag-lime" style={{ fontSize: "7px", padding: "6px 12px", display: "inline-block", marginTop: "16px" }}>
-            ⬆ HIGH AUTHENTICITY
+            ⬆ REAL IMPACT
           </div>
         </div>
       </div>

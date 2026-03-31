@@ -3,14 +3,14 @@ export default function CTA() {
     <section id="cta">
       <div className="cta-prompt">
         <div className="notif-dot" />
-        PRESS START TO BEGIN YOUR QUEST
+        PRECISION OVER VOLUME. IMPACT OVER OPTICS.
         <span className="cursor-blink" />
       </div>
       <h2 className="cta-title">
         READY TO FLOAT<br />ABOVE THE NOISE?
       </h2>
       <p className="cta-sub">
-        Join thousands of brands and creators building real influence — one authentic partnership at a time.
+        Every creator, regardless of follower count, can build a sustainable livelihood through authentic brand partnerships. Every brand, regardless of budget, can access community-level influence that actually drives results.
       </p>
 
       <div className="cta-buttons">

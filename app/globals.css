@@ -847,30 +847,54 @@ section {
 .track-brands .track-header-line { background: var(--accent-gold); }
 .track-influencers .track-header-line { background: var(--accent-cyan); }
 
-/* Divider between panels */
-.track-divider {
+/* How It Works toggle */
+.how-toggle {
   display: flex;
-  align-items: center;
-  gap: 20px;
-  max-width: var(--container);
-  margin: 40px auto;
+  justify-content: center;
+  margin-bottom: 40px;
 }
 
-.track-divider-line {
-  flex: 1;
-  height: 2px;
-  background: var(--card-border);
-  opacity: 0.25;
-}
-
-.track-divider-label {
-  font-size: 9px;
-  letter-spacing: 4px;
-  color: var(--accent-gold);
-  padding: 8px 20px;
+.how-toggle-inner {
+  display: flex;
   border: 2px solid var(--card-border);
+  overflow: hidden;
+}
+
+.how-toggle-btn {
+  font-family: "Press Start 2P", monospace;
+  font-size: 8px;
+  letter-spacing: 2px;
+  padding: 14px 28px;
+  background: transparent;
+  color: rgba(240, 230, 255, 0.4);
+  border: none;
+  cursor: pointer;
+  transition: color 0.15s ease, background 0.15s ease;
   white-space: nowrap;
-  animation: vs-pulse 2s steps(2) infinite;
+}
+
+.how-toggle-btn:first-child {
+  border-right: 2px solid var(--card-border);
+}
+
+.how-toggle-btn:hover:not([class*="--active"]) {
+  color: var(--white);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.how-toggle-btn--active-brands {
+  background: var(--accent-gold);
+  color: var(--dark);
+}
+
+.how-toggle-btn--active-influencers {
+  background: var(--accent-cyan);
+  color: var(--dark);
+}
+
+/* Panel animates in on each toggle switch */
+.track-panel--toggled {
+  animation: fade-up 0.35s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 .step {

@@ -91,9 +91,11 @@ export default function Hero() {
           ► PRECISION INFLUENCE. REAL RESULTS.
         </div>
 
-        <h1 className="hero-title">BEYOND THE SPRAY &amp; PRAY</h1>
+        <h1 className="hero-title">SMALL CREATORS. BIG IMPACT. BETTER ROI.</h1>
         <p className="hero-desc">
-          Socu connects brands with nano, micro, and small influencers to run precision-targeted campaigns, delivering measurable social impact at or below the cost of traditional influencer marketing.
+          Built for brands who want precision over noise,<br />
+          and creators who deserve more than crumbs.<br />
+          <span style={{ opacity: 0.75 }}>Socu makes influencer marketing work for both sides.</span>
         </p>
 
         <div className="health-container">

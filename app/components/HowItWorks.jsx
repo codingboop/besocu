@@ -1,3 +1,7 @@
+"use client";
+
+import { useState } from "react";
+
 const brandSteps = [
   {
     num: "STEP 01",
@@ -45,47 +49,49 @@ const influencerSteps = [
 ];
 
 export default function HowItWorks() {
+  const [active, setActive] = useState("brands");
+  const isBrands = active === "brands";
+
   return (
     <section id="how">
       <div className="section-label reveal">HOW IT WORKS</div>
       <h2 className="section-title reveal">FROM BRIEF TO IMPACT</h2>
       <p className="section-desc reveal">Two paths. One platform. Zero middlemen.</p>
 
-      {/* Brands panel */}
-      <div className="track-panel track-brands reveal">
-        <div className="track-header">
-          <span className="track-tag track-tag--brands">► FOR BRANDS</span>
-          <div className="track-header-line" />
-        </div>
-        <div className="steps-track steps-track--brands">
-          {brandSteps.map((step, i) => (
-            <div className="step" key={`brand-${i}`}>
-              <div className="step-dot step-dot--brands" />
-              <div className="step-num">{step.num}</div>
-              <div className="step-title">{step.title}</div>
-              <div className="step-body">{step.body}</div>
-            </div>
-          ))}
+      {/* Toggle */}
+      <div className="how-toggle reveal">
+        <div className="how-toggle-inner">
+          <button
+            className={`how-toggle-btn${isBrands ? " how-toggle-btn--active-brands" : ""}`}
+            onClick={() => setActive("brands")}
+          >
+            ► FOR BRANDS
+          </button>
+          <button
+            className={`how-toggle-btn${!isBrands ? " how-toggle-btn--active-influencers" : ""}`}
+            onClick={() => setActive("influencers")}
+          >
+            ► FOR INFLUENCERS
+          </button>
         </div>
       </div>
 
-      {/* Divider */}
-      <div className="track-divider reveal">
-        <div className="track-divider-line" />
-        <span className="track-divider-label">OR</span>
-        <div className="track-divider-line" />
-      </div>
-
-      {/* Influencers panel */}
-      <div className="track-panel track-influencers reveal">
+      {/* Panel — key forces remount on switch, retriggering step animations */}
+      <div
+        key={active}
+        className={`track-panel ${isBrands ? "track-brands" : "track-influencers"} track-panel--toggled`}
+      >
         <div className="track-header">
-          <span className="track-tag track-tag--influencers">► FOR INFLUENCERS</span>
+          <span className={`track-tag ${isBrands ? "track-tag--brands" : "track-tag--influencers"}`}>
+            {isBrands ? "► FOR BRANDS" : "► FOR INFLUENCERS"}
+          </span>
           <div className="track-header-line" />
         </div>
-        <div className="steps-track steps-track--influencers">
-          {influencerSteps.map((step, i) => (
-            <div className="step" key={`inf-${i}`}>
-              <div className="step-dot step-dot--influencers" />
+
+        <div className={`steps-track ${isBrands ? "steps-track--brands" : "steps-track--influencers"}`}>
+          {(isBrands ? brandSteps : influencerSteps).map((step, i) => (
+            <div className="step" key={i} style={{ animationDelay: `${i * 0.08}s` }}>
+              <div className={`step-dot ${isBrands ? "step-dot--brands" : "step-dot--influencers"}`} />
               <div className="step-num">{step.num}</div>
               <div className="step-title">{step.title}</div>
               <div className="step-body">{step.body}</div>

@@ -45,9 +45,7 @@ const landingMarkup = `
       ► NEW LEVEL UNLOCKED — AUTHENTIC INFLUENCE
     </div>
 
-    <div class="hero-tagline">▲ WORKOS PRESENTS ▲</div>
-    <h1 class="hero-title">SOCU</h1>
-    <div class="hero-sub">BEYOND THE SPRAY & PRAY</div>
+    <h1 class="hero-title">BEYOND THE SPRAY & PRAY</h1>
     <p class="hero-desc">A natural space connecting authentic micro and nano influencers with brands. Float above the noise.</p>
 
     <div class="health-container">

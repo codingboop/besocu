@@ -147,17 +147,7 @@ nav {
 .hero-sky {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    180deg,
-    #1a0a2e 0%,
-    #3b0764 15%,
-    #7e22ce 30%,
-    #c026d3 45%,
-    #ec4899 58%,
-    #f97316 72%,
-    #fb923c 82%,
-    #fef08a 100%
-  );
+  background: #0a0a0a;
 }
 
 .stars {
@@ -227,7 +217,7 @@ nav {
 }
 
 .hero-title {
-  font-size: clamp(36px, 8vw, 80px);
+  font-size: clamp(24px, 5vw, 52px);
   line-height: 1.1;
   margin-bottom: 8px;
   color: var(--white);

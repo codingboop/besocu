@@ -720,8 +720,8 @@ section {
 
 .steps-track {
   position: relative;
-  max-width: var(--container);
-  margin: 0 auto;
+  max-width: 100%;
+  margin: 0;
   padding-left: 60px;
 }
 
@@ -730,7 +730,7 @@ section {
   position: absolute;
   left: 16px;
   top: 0;
-  bottom: 0;
+  bottom: 56px;
   width: 4px;
   background: repeating-linear-gradient(
     180deg,
@@ -739,6 +739,138 @@ section {
     transparent 8px,
     transparent 16px
   );
+}
+
+/* Colored timeline lines per audience */
+.steps-track--brands::before {
+  background: repeating-linear-gradient(
+    180deg,
+    var(--accent-gold) 0px,
+    var(--accent-gold) 8px,
+    transparent 8px,
+    transparent 16px
+  );
+  opacity: 0.6;
+}
+
+.steps-track--influencers::before {
+  background: repeating-linear-gradient(
+    180deg,
+    var(--accent-cyan) 0px,
+    var(--accent-cyan) 8px,
+    transparent 8px,
+    transparent 16px
+  );
+  opacity: 0.6;
+}
+
+/* Dot colors per audience */
+.step-dot--brands {
+  background: var(--accent-gold);
+  box-shadow: 0 0 0 4px var(--card-bg), 0 0 0 8px var(--accent-gold), 0 0 16px rgba(251, 191, 36, 0.35);
+}
+
+.step-dot--influencers {
+  background: var(--accent-cyan);
+  box-shadow: 0 0 0 4px var(--card-bg), 0 0 0 8px var(--accent-cyan), 0 0 16px rgba(34, 211, 238, 0.35);
+}
+
+/* Track panels */
+.track-panel {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 36px 36px 12px;
+  position: relative;
+  border-top: 4px solid;
+  border-left: 4px solid;
+}
+
+.track-panel::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  right: -8px;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.12;
+}
+
+.track-brands {
+  border-color: var(--accent-gold);
+  background: rgba(251, 191, 36, 0.03);
+}
+
+.track-brands::after {
+  background: var(--accent-gold);
+}
+
+.track-influencers {
+  border-color: var(--accent-cyan);
+  background: rgba(34, 211, 238, 0.03);
+}
+
+.track-influencers::after {
+  background: var(--accent-cyan);
+}
+
+.track-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 36px;
+}
+
+.track-tag {
+  font-size: 8px;
+  letter-spacing: 3px;
+  padding: 7px 16px;
+  white-space: nowrap;
+}
+
+.track-tag--brands {
+  background: var(--accent-gold);
+  color: var(--dark);
+}
+
+.track-tag--influencers {
+  background: var(--accent-cyan);
+  color: var(--dark);
+}
+
+.track-header-line {
+  flex: 1;
+  height: 2px;
+  opacity: 0.2;
+}
+
+.track-brands .track-header-line { background: var(--accent-gold); }
+.track-influencers .track-header-line { background: var(--accent-cyan); }
+
+/* Divider between panels */
+.track-divider {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  max-width: var(--container);
+  margin: 40px auto;
+}
+
+.track-divider-line {
+  flex: 1;
+  height: 2px;
+  background: var(--card-border);
+  opacity: 0.25;
+}
+
+.track-divider-label {
+  font-size: 9px;
+  letter-spacing: 4px;
+  color: var(--accent-gold);
+  padding: 8px 20px;
+  border: 2px solid var(--card-border);
+  white-space: nowrap;
+  animation: vs-pulse 2s steps(2) infinite;
 }
 
 .step {
@@ -788,8 +920,6 @@ section {
   top: 4px;
   width: 20px;
   height: 20px;
-  background: var(--accent-gold);
-  box-shadow: 0 0 0 4px var(--dark), 0 0 0 8px var(--card-border);
 }
 
 .step-num {

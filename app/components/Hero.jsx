@@ -91,7 +91,7 @@ export default function Hero() {
           ► PRECISION INFLUENCE. REAL RESULTS.
         </div>
 
-        <h1 className="hero-title">SMALL CREATORS. BIG IMPACT. BETTER ROI.</h1>
+        <h1 className="hero-title">SMALL CREATORS.<br />BIG IMPACT. BETTER ROI.</h1>
         <p className="hero-desc">
           Built for brands who want precision over noise,<br />
           and creators who deserve more than crumbs.<br />

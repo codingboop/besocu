@@ -1,4 +1,5 @@
 import "./globals.css";
+import SoundManager from "./components/SoundManager";
 
 export const metadata = {
   title: "SOCU — Beyond the Spray & Pray",
@@ -21,7 +22,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <SoundManager />
+        {children}
+      </body>
     </html>
   );
 }

@@ -1,7 +1,7 @@
 export default function Features() {
   return (
     <section id="features">
-      <div className="section-label">FOR BRANDS</div>
+      <div className="section-label reveal">FOR BRANDS</div>
       <h2 className="section-title reveal">BUILD CAMPAIGNS THAT ACTUALLY CONVERT</h2>
       <p className="section-desc reveal">Stop paying for impressions that don&apos;t move the needle.</p>
 

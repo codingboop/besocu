@@ -55,7 +55,7 @@ const influencerSteps = [
 export default function HowItWorks() {
   return (
     <section id="how">
-      <div className="section-label">HOW IT WORKS</div>
+      <div className="section-label reveal">HOW IT WORKS</div>
       <h2 className="section-title reveal">FROM BRIEF TO IMPACT</h2>
       <p className="section-desc reveal">Two paths. One platform. Zero middlemen.</p>
 

@@ -167,13 +167,9 @@ nav {
 }
 
 @keyframes twinkle {
-  0%,
-  100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.1;
-  }
+  0%, 100% { opacity: 0.9; transform: scale(1); }
+  40% { opacity: 0.08; transform: scale(0.6); }
+  60% { opacity: 0.5; transform: scale(0.8); }
 }
 
 .cloud {
@@ -206,7 +202,8 @@ nav {
   position: relative;
   z-index: 10;
   text-align: center;
-  padding: 0 20px;
+  padding: 48px 32px;
+  background: radial-gradient(ellipse 110% 100% at center, rgba(0, 0, 0, 0.55) 0%, transparent 72%);
 }
 
 .hero-tagline {
@@ -227,7 +224,7 @@ nav {
     6px 6px 0 #3b0764,
     -2px -2px 0 #f472b6,
     12px 12px 0 rgba(0, 0, 0, 0.4);
-  animation: slide-down 0.6s steps(8) both;
+  animation: slide-down 0.8s steps(10) 0.2s both;
 }
 
 @keyframes slide-down {
@@ -251,21 +248,35 @@ nav {
 
 .hero-desc {
   font-family: "VT323", monospace;
-  font-size: clamp(16px, 2.5vw, 22px);
-  color: rgba(240, 230, 255, 0.85);
+  font-size: clamp(18px, 2.5vw, 24px);
+  color: var(--white);
   max-width: 560px;
   margin: 0 auto 40px;
   line-height: 1.6;
-  animation: fade-in 0.4s 0.5s both;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.95), 0 1px 4px rgba(0, 0, 0, 0.8);
+  animation: fade-up 0.7s ease 0.45s both;
 }
 
 @keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fade-up {
   from {
     opacity: 0;
+    transform: translateY(20px);
   }
   to {
     opacity: 1;
+    transform: translateY(0);
   }
+}
+
+@keyframes pop-in {
+  0% { opacity: 0; transform: scale(0.92) translateY(14px); }
+  65% { transform: scale(1.03) translateY(-3px); }
+  100% { opacity: 1; transform: scale(1) translateY(0); }
 }
 
 .hero-buttons {
@@ -273,7 +284,7 @@ nav {
   gap: 20px;
   justify-content: center;
   flex-wrap: wrap;
-  animation: fade-in 0.4s 0.7s both;
+  animation: pop-in 0.6s ease 0.85s both;
 }
 
 .btn-primary {
@@ -369,13 +380,9 @@ nav {
 }
 
 @keyframes char-float {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-16px);
-  }
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  30% { transform: translateY(-14px) rotate(-1.5deg); }
+  60% { transform: translateY(-8px) rotate(1deg); }
 }
 
 .ticker {
@@ -759,12 +766,20 @@ section {
 @keyframes step-in {
   from {
     opacity: 0;
-    transform: translateX(-20px);
+    transform: translateX(-28px);
   }
   to {
     opacity: 1;
     transform: translateX(0);
   }
+}
+
+.step {
+  transition: transform 0.2s ease;
+}
+
+.step:hover {
+  transform: translateX(6px);
 }
 
 .step-dot {
@@ -1190,16 +1205,20 @@ footer {
 
 .reveal {
   opacity: 0;
-  transform: translateY(20px);
+  transform: translateY(28px);
   transition:
-    opacity 0.4s steps(4),
-    transform 0.4s steps(4);
+    opacity 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .reveal.visible {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* Stagger feature cards */
+.features-grid .feature-card:nth-child(2) { transition-delay: 0.12s; }
+.features-grid .feature-card:nth-child(3) { transition-delay: 0.24s; }
 
 .health-container {
   display: flex;
@@ -1209,6 +1228,7 @@ footer {
   margin-bottom: 16px;
   font-size: 8px;
   color: var(--accent-lime);
+  animation: fade-up 0.6s ease 0.65s both;
 }
 
 .health-bar {
@@ -1250,7 +1270,7 @@ footer {
   color: var(--accent-cyan);
   letter-spacing: 2px;
   margin-bottom: 24px;
-  animation: notif-glow 2s ease-in-out infinite;
+  animation: fade-up 0.5s ease 0s both, notif-glow 2.5s ease-in-out 0.5s infinite;
 }
 
 @keyframes notif-glow {

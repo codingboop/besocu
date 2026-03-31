@@ -49,7 +49,7 @@ export default function LevelUp() {
 
   return (
     <section id="levelup">
-      <div className="section-label">FOR INFLUENCERS</div>
+      <div className="section-label reveal">FOR INFLUENCERS</div>
       <h2 className="section-title reveal">YOUR GROWTH. YOUR TERMS. YOUR EARNINGS.</h2>
       <p className="section-desc reveal">Whether you have 1,000 followers or 100,000, your voice has value here. Nano creators finally earn what they deserve.</p>
 

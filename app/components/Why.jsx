@@ -1,7 +1,7 @@
 export default function Why() {
   return (
     <section id="why">
-      <div className="section-label">THE PROBLEM</div>
+      <div className="section-label reveal">THE PROBLEM</div>
       <h2 className="section-title reveal">INFLUENCER MARKETING IS BROKEN</h2>
       <p className="section-desc reveal">
         Brands burn money. Influencers burn out. Audiences tune out.

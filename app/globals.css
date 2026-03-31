@@ -1097,6 +1097,57 @@ footer {
   }
 }
 
+/* ── Mobile hamburger button ── */
+.nav-hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.nav-hamburger span {
+  display: block;
+  width: 20px;
+  height: 3px;
+  background: var(--accent-cyan);
+}
+
+.nav-mobile-menu {
+  position: fixed;
+  top: 53px;
+  left: 0;
+  right: 0;
+  background: rgba(13, 6, 23, 0.98);
+  border-bottom: 4px solid var(--card-border);
+  display: flex;
+  flex-direction: column;
+  padding: 24px 32px;
+  gap: 20px;
+  z-index: 999;
+  backdrop-filter: blur(4px);
+}
+
+.nav-mobile-menu a {
+  color: var(--accent-cyan);
+  text-decoration: none;
+  font-size: 8px;
+  letter-spacing: 1px;
+}
+
+.nav-mobile-menu a:hover {
+  color: var(--accent-gold);
+}
+
+.nav-mobile-menu .nav-cta {
+  background: var(--accent-lime);
+  color: var(--dark);
+  padding: 8px 16px;
+  display: inline-block;
+}
+
 @media (max-width: 768px) {
   nav {
     padding: 10px 16px;
@@ -1104,6 +1155,10 @@ footer {
 
   .nav-links {
     display: none;
+  }
+
+  .nav-hamburger {
+    display: flex;
   }
 
   section {
@@ -1126,6 +1181,17 @@ footer {
   .footer-bottom {
     flex-direction: column;
     gap: 12px;
+  }
+}
+
+/* ── Respect reduced-motion preference ── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }
 
